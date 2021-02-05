@@ -1,0 +1,83 @@
+%!TEX root = ../thesis.tex
+
+\chapter*{Appendix}
+\markboth{Appendix}{Appendix}
+\vspace*{20pt}
+
+% Add label in the list of contents
+\addcontentsline{toc}{chapter}{Appendix}
+
+\begin{center}
+	\textcolor{SchoolColor}{\Titulosize\bfseries Dielectric properties of electrolyte solutions} \normalsize \\
+	\vspace*{20pt}
+\end{center}
+
+\setcounter{table}{0}
+\renewcommand\thetable{A.\arabic{table}}
+
+Complex dielectric spectra were measured for a series of metal-alkali chloride (MCl with M $=$ Na$^+$, K$^+$, Rb$^+$ and Cs$^+$) solutions both in H$_2$O and D$_2$O. For the study of protons (\ce{H+}) and hydroxide (\ce{OH-}) ion, we recorded complex dielectric spectra for the following solutions: \ce{HCl} and \ce{NaOH} dissolved in \ce{H2O} and \ce{DCl} and \ce{NaOD} dissolved in \ce{D2O}. Calibration of the setup was made prior measurements using air (open circuit), deionized water (5.5 $\mu$S/m) at 23$^\circ$C and silver paint (short circuit). The dielectric properties of pure H$_2$O were extracted from previously reported values by Buchner and co-workers.\!\cite{Buchner1999}
+
+%Complex dielectric spectra were measured for a series of metal-alkali chloride (MCl with M $=$ Na$^+$, K$^+$, Rb$^+$ and Cs$^+$) solutions both in H$_2$O and D$_2$O. For the study of protons (\ce{H+}) and hydroxide (\ce{OH-}) ion, we recorded complex dielectric spectra for the following solutions: \ce{HCl} and \ce{NaOH} dissolved in \ce{H2O} and \ce{DCl} and \ce{NaOD} dissolved in \ce{D2O}. Calibration of the setup was made prior measurements using air (open circuit), deionized water (5.5 $\mu$S/m) at 23$^\circ$C and silver paint (short circuit). The dielectric properties of pure H$_2$O were extracted from previously reported values by Buchner and co-workers.\!\cite{Buchner1999}
+
+To systematically study solvation properties, we perform concentration-dependent measurements in steps of 0.1 molal (or 0.1 molar for the study of protons and hydroxide ions), and determine the amplitude of the Debye dipole relaxation, $A_\text{D}$. The densities of all the samples were measured to estimate the solute molarity, $c$, and to account for the reduction of $A_\text{D}$ due to dilution of the solvent, referred to as $A_\text{D,n}$.
+
+
+As discussed in previous chapters, the dielectric permittivity of aqueous electrolytes is well described using the Cole--Cole relaxation model, with an additional contribution assigned to the translational motion of ions through the solution, i.e. ionic conductivity. The total permittivity is determined by performing a least-square fit of the following equation: 
+\begin{eqnarray}
+\hat{\epsilon}(\nu) = \epsilon_{\infty} + \frac{\epsilon_{\rm s} - \epsilon_{\infty}}{1 + (i 2 \pi \nu \tau_{\rm D})^{1-\alpha}} - \frac{i \sigma}{2 \pi \nu \epsilon_0}, \nonumber
+\label{Permittivity}
+\end{eqnarray}
+with $A_\text{D} (c) = \epsilon_s (c) - \epsilon_\infty$, $\tau_D$ the average dipole relaxation time, $\alpha$ accounts for the spectral broadening due to inhomogeneities upon adding ions to the solvent, $\sigma$ the DC ionic conductivity and $\epsilon_0$ the vacuum permittivity. Based on previous results,\!\cite{Lileev2007} the dielectric response of the solvent in the high frequency range, $\epsilon_\infty$, is independent of ion concentration. Therefore, to reduce the number of fitting parameters and to achieve better agreement in our values, we fixed $\epsilon_\infty$ to the value for pure solvent. However, since experimental values for the dielectric properties of D$_2$O are largely lacking, we first performed measurements of pure D$_2$O at 23$^\circ$C, and determined its dielectric properties using equation (\ref{Permittivity}) with $\alpha = 0$ and $\sigma = 0$, leading to $\epsilon_\infty = 5.803$, $A_\text{D} (0) = 72.783$ and $\tau_\text{D} (0) = 11.07$ ps.
+
+Apart from the dilution of the solvent, dissolved ions also exert a strong influence on the orientational motion of the surrounding water molecules, an effect conventionally referred as depolarization. To unambiguously account for this effect, we defined $\Delta A_\text{D} (c) = A_\text{D,n} (c) - A_\text{D} (c)$. Tables \ref{my-label}--\ref{my-label12} summarize all the experimental values extracted for dielectric properties of the studied solutions.
+
+
+
+
+\begin{table}[!ht]
+	\centering
+	\caption{Molality, m [mol/kg], density, $\rho$, ionic concentration, $c$ [mol/dm$^3$], reduced dielectric response due to dilution of the solvent, $A_\text{D,n}$, depolarization, $\Delta A_\text{D}$, dielectric relaxation parameters $\tau_\text{D}$, $\alpha$ and specific conductivity, $\sigma$, of NaCl in H$_2$O at 23$^\circ$C.}
+	\label{my-label}
+	\begin{tabular}{cccccccc}
+		\hline
+		m & $\rho$ [g/dm$^3$] & $c$ & $A_\text{D,n}$ & $\Delta A_\text{D}$ & $\tau_\text{D}$ [ps] & $\alpha$ & $\sigma$ [S/m] \\
+		\hline
+		0.1 & 1000.65   & 0.0996 & 73.043   & 1.452(33)      & 8.598    & 0.0006 & 1.025(4)  \\
+		0.2 & 1004.75   & 0.1993 & 72.916   & 2.706(15)      & 8.538    & 0.0031 & 1.938(7)  \\
+		0.3 & 1008.77   & 0.2984 & 72.786   & 3.870(20)      & 8.455    & 0.0050 & 2.806(9)  \\
+		0.4 & 1012.70   & 0.3973 & 72.650   & 4.901(23)      & 8.398    & 0.0075 & 3.623(8)  \\
+		0.5 & 1016.67   & 0.4954 & 72.521   & 5.904(20)      & 8.342    & 0.0098 & 4.410(5)  \\
+		0.6 & 1020.57   & 0.5933 & 72.387   & 6.827(7)       & 8.299    & 0.0121 & 5.175(6)  \\
+		0.7 & 1024.50   & 0.6913 & 72.255   & 7.761(33)      & 8.240    & 0.0142 & 5.914(5)  \\
+		0.8 & 1028.40   & 0.7886 & 72.124   & 8.684(18)      & 8.190    & 0.0164 & 6.639(10) \\
+		0.9 & 1032.25   & 0.8854 & 71.991   & 9.565(17)      & 8.137    & 0.0186 & 7.338(6)  \\
+		1.0 & 1036.00   & 0.9819 & 71.853   & 10.396(52)     & 8.099    & 0.0212 & 8.003(28) \\
+		\hline
+	\end{tabular}
+\end{table}
+
+
+\begin{table}[!ht]
+	\centering
+	\caption{Molality, m [mol/kg], density, $\rho$, ionic concentration, $c$ [mol/dm$^3$], reduced dielectric response due to dilution of the solvent, $A_\text{D,n}$, depolarization, $\Delta A_\text{D}$, dielectric relaxation parameters $\tau_\text{D}$, $\alpha$ and specific conductivity, $\sigma$, of NaCl in D$_2$O at 23$^\circ$C.}
+	\label{my-label2}
+	\begin{tabular}{cccccccc}
+		\hline
+		m & $\rho$ [g/dm$^3$] & $c$   & $A_\text{D,n}$ & $\Delta A_\text{D}$ & $\tau_\text{D}$ [ps] & $\alpha$ & $\sigma$ [S/m] \\
+		\hline
+		0.1 & 1108.00 & 0.0997 & 72.756 & 1.491(17)  & 10.931 & 0.0019 & 0.845(3)  \\
+		0.2 & 1111.92 & 0.1992 & 72.631 & 2.749(32)  & 10.830  & 0.0006 & 1.592(6)  \\
+		0.3 & 1115.93 & 0.2984 & 72.513 & 3.909(9)   & 10.732 & 0.0033 & 2.314(7)  \\
+		0.4 & 1119.82 & 0.3971 & 72.389 & 4.969(13)  & 10.651 & 0.0055 & 2.991(6)  \\
+		0.5 & 1123.63 & 0.4956 & 72.260 & 5.984(5)   & 10.575 & 0.0080 & 3.650(9) \\
+		0.6 & 1127.35 & 0.5935 & 72.129 & 6.933(12)  & 10.500 & 0.0103 & 4.273(9) \\
+		0.7 & 1131.10 & 0.6913 & 71.999 & 7.870(18)  & 10.432 & 0.0127 & 4.878(3)  \\
+		0.8 & 1134.95 & 0.7886 & 71.877 & 8.813(31)  & 10.336 & 0.0148 & 5.491(17) \\
+		0.9 & 1138.57 & 0.8860 & 71.741 & 9.699(26)  & 10.258 & 0.0169 & 6.073(17) \\
+		1.0 & 1142.20 & 0.9825 & 71.608 & 10.545(26) & 10.191 & 0.0190 & 6.631(16) \\
+		\hline
+	\end{tabular}
+\end{table}
+
+
+

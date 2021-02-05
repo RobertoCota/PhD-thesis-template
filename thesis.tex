@@ -1,0 +1,134 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass{Dissertate}
+
+\listfiles
+
+\begin{document}
+
+\def\bibfont{\small}
+\renewcommand\refname{}
+
+%%%% FIRST PAGES %%%%%%%%%%%%	
+
+\include{frontmatter/cover}
+
+% Add personal and university information
+\include{frontmatter/titelblad}
+
+\setstretch{\dnormalspacing}
+
+% Add dedication (or not)
+\dedicationpage{frontmatter/dedication}
+
+% Publications 
+% Add publication list: this command has been defined
+% in the dissertate class
+\include{frontmatter/emptypage}
+\publicationspage
+
+% Add table of contents
+\tableofcontents
+
+
+%%%%%%%%%			CHAPTERS		%%%%%%%%%%
+
+% First chapter image
+% Add an empty page if the table of contents finishes in 
+% a even number, otherwise comment the next line
+\include{frontmatter/emptypage}
+
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+	\node at (current page.center) {\includegraphics[width=1\pdfpagewidth,height=1\pdfpageheight]{fullpage_images/stereoFinalePDF.pdf}};
+\end{tikzpicture}
+% If no image is desired, comment all this block
+% Note: for the second chapter and upwards these lines
+% are defined inside the chapter*.tex file
+
+
+
+\onehalfspacing
+\mainmatter
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{#1}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\lhead[\fancyplain{}]{{\nouppercase\rightmark}}
+\rhead[\fancyplain{}{\nouppercase\leftmark}]{}
+
+\begin{spacing}{\dcompressedspacing}
+
+
+%%% ADD CHAPTERS
+
+\include{chapters/Chapter1_Introduction/Chp1}
+
+% Add an empty page if needed to accomodate properly the chapter image
+%\include{frontmatter/emptypage}
+\include{chapters/Chapter2_Methods/Chp2}
+
+% Add an empty page if needed to accomodate properly the chapter image
+%\include{frontmatter/emptypage}
+\include{chapters/Chapter3_Methods2/Chp3}
+
+% Add an empty page if needed to accomodate properly the chapter image
+%\include{frontmatter/emptypage}
+\include{chapters/Chapter4_PRL/Chp4}
+
+% Add an empty page if needed to accomodate properly the chapter image
+%\include{frontmatter/emptypage}
+%\include{chapters/Chapter5...}
+
+% Add an empty page if needed to accomodate properly the chapter image
+%\include{frontmatter/emptypage}
+%\include{chapters/Chapter6...}
+
+% Add an empty page if needed to accomodate properly the chapter image
+%\include{frontmatter/emptypage}
+%\include{chapters/Chapter7...}
+
+\end{spacing}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{spacing}{\dcompressedspacing}
+	\small
+			
+	\renewcommand\refname{} 
+	\addcontentsline{toc}{chapter}{References}%{Epilogue references}
+	\renewcommand\bibname{References}
+	\bibliographystyle{achemso}
+	
+	% Import bibtex files
+	\bibliography{bibliography/library,bibliography/CP2K}
+	
+
+\end{spacing}
+\normalsize
+%\lhead[\fancyplain{}]{{}}
+%\rhead[\fancyplain{}]{{}}
+
+
+%%%%%%%   ADDITIONAL TO THE CHAPTERS   %%%%%%%%%%
+\begin{spacing}{\dcompressedspacing}
+	
+
+\include{endmatter/appendix_A}
+
+\include{endmatter/summary_eng}
+\include{endmatter/summary_ned}
+%\include{endmatter/summary_esp}
+%\include{endmatter/summary_rus}
+
+\include{endmatter/acknowledgements}
+
+\include{endmatter/backcover}
+
+
+\end{spacing}			
+
+\setstretch{\dnormalspacing}
+
+\end{document}
